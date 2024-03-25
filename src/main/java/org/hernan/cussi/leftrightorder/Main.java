@@ -1,9 +1,6 @@
 package org.hernan.cussi.leftrightorder;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 public class Main {
 
@@ -13,11 +10,11 @@ public class Main {
    */
   public static void main(String[] args) throws Exception {
 
-    var res = calculateMap(List.of(1, 1, 0, 1, 0));
+    var res = leftRightOrder(List.of(1, 1, 0, 1, 0));
     System.out.println(res);
   }
 
-  private static List<Integer> calculateMap(final List<Integer> input) {
+  private static List<Integer> leftRightOrder(final List<Integer> input) {
 
     return input.stream().sorted().toList();
   }

@@ -1,6 +1,5 @@
 package org.hernan.cussi.duplicatecharacters;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -13,11 +12,11 @@ public class Main {
 
   public static void main(String[] args) throws Exception {
 
-    var res = calculateMap("abbgaaajcxxx");
+    var res = calculateDuplicates("abbgaaajcxxx");
     System.out.println(res);
   }
 
-  private static List<Character> calculateMap(final String input) {
+  private static List<Character> calculateDuplicates(final String input) {
     List<Character> characters = input.chars().mapToObj(c -> (char) c).toList();
 
     return characters.stream()

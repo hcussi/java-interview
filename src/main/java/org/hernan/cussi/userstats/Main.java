@@ -38,11 +38,11 @@ public class Main {
     maps.add(Map.of("2", new UserStats(Optional.of(22L))));
     maps.add(Map.of("2", new UserStats(Optional.of(224L))));
 
-    var mapCount = count(maps);
+    var mapCount = countMap(maps);
     System.out.println(mapCount);
   }
 
-  public static Map<Long, Long> count(List<Map<String, UserStats>> visits) {
+  public static Map<Long, Long> countMap(List<Map<String, UserStats>> visits) {
     if (visits == null || visits.isEmpty()) {
       return Map.of();
     }
